@@ -1,4 +1,4 @@
-select ServerIdFromHandlebars = '{{ServerId}}', -- use this style if it cannot be parameterized
+select ServerIdFromHandlebars = '{{ServerId}}', -- use this style if it cannot be parameterized, such as use in database name
        ServerIdFromParameters = @ServerId,       -- recommended way. handles escaping characters automatically
        ServerName = @ServerName,
        Description = @Description,
