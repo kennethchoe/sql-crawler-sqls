@@ -1,8 +1,8 @@
-select ServerIdFromHandlebars = '{{ServerId}}', -- use this style if it cannot be parameterized, such as use in database name
-       ServerIdFromParameters = @ServerId,       -- recommended way. handles escaping characters automatically
-       ServerName = @ServerName,
-       Description = @Description,
-       UserData1 = @UserData1,
-       UserData2 = @UserData2
+select '{{ServerId}}' as ServerIdFromHandlebars, -- use this style if it cannot be parameterized, such as use in database name
+       @ServerId as ServerIdFromParameters,       -- recommended way. handles escaping characters automatically
+       @ServerName as ServerName,
+       @Description as Description,
+       @UserData1 as UserData1,
+       @UserData2 as UserData2
        
        -- you can expose public server info only. you cannot expose DataSource nor any credentials.

@@ -1,2 +1,2 @@
-waitfor delay '00:00:01';
+-- this query runs on servers starting within scope1 only
 select DateTime = getdate()
